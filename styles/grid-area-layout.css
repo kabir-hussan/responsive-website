@@ -22,5 +22,30 @@
     "header     header      header      header"
     "nav        main        main        sidebar"
     "nav        main        main        advertise"
-    "footer     footer     footer      footer"
+    "footer     footer     footer      footer";
+}
+
+/* added responsiveness */
+/* smaller device */
+@media screen and (max-width:576px) {
+    .grid-container{
+        grid-template-areas: 
+        "nav"
+        "header"
+        "main"
+        "sidebar"
+        "advertise"
+        "footer";
+    }
+    .nav ul{
+        display: flex;
+        justify-content: space-between;
+
+    }
+    .nav ul li a{
+
+        text-decoration: none;
+        margin: 20px;
+    }
+    
 }
