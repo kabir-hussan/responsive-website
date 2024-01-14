@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Grid Layout</title>
+    <style>
+
+        .container-parent{
+            width: 1200px;
+            margin: auto;
+        }
+        .container{
+            background-color: rgba(128, 128, 128, 0.26);
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+            grid-template-rows: repeat(3,250px);
+            gap: 20px;
+
+        }
+        .box{
+            display: flex;
+            background-color: gray;
+            justify-content: center;
+            align-items: center;
+            color: rgb(228, 226, 220);
+            font-size: 45px;
+
+
+        }
+        #box-1{
+            grid-row: span 5;
+        }
+
+        #box-11, #box-12{
+            grid-column: span 3;
+        }
+        .same-bg{
+            background-color: rgba(226, 74, 74, 0.877);
+        }
+       
+    </style>
+</head>
+<body>
+    <header>
+       <h1 style="text-align: center; font-size: 60px;">Simple Grid Layout Design</h1>
+    </header>
+
+    <main>
+        <div class="container-parent">
+            <div class="container">
+                <div class="box" id="box-1">Box-1</div>
+                <div class="box">Box-2</div>
+                <div class="box">Box-3</div>
+                <div class="box">Box-4</div>
+                <div class="box">Box-5</div>
+                <div class="box same-bg">Box-6</div>
+                <div class="box same-bg">Box-7</div>
+                <div class="box">Box-8</div>
+                <div class="box same-bg">Box-9</div>
+                <div class="box same-bg">Box-10</div>
+                <div class="box" id="box-11">Box-11</div>
+                <div class="box" id="box-12">Box-12</div>
+            </div>
+        </div>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>
